@@ -1,0 +1,41 @@
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO JavaAgent - Logging set up for log4j2
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO JavaAgent - ####################################################################################
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO JavaAgent - Java Agent Directory [/Users/akliuiko/Projects/AppDynamics/ver24.10.0.36431]
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO JavaAgent - Java Agent AppAgent directory [/Users/akliuiko/Projects/AppDynamics/ver24.10.0.36431]
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO JavaAgent - Using Java Agent Version [Server Agent #24.10.0.36431 v24.10.0 GA compatible with 4.4.1.0 r8ad7818e80fbe2350b8802009cca89f08bcdfe63 release/24.10.0]
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO JavaAgent - All agent classes have been pre-loaded
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO JavaAgent - JVM Technology: Amazon.com Inc.
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO JavaAgent - Identified JVM Technology as Sun
+[AD Agent init] 16 Nov 2024 21:40:25,888  INFO AgentKernel - Starting Java Agent at Sat Nov 16 21:40:25 EET 2024 ...
+[AD Agent init] 16 Nov 2024 21:40:25,888  INFO AgentKernel - Time zone: Eastern European Standard Time
+[AD Agent init] 16 Nov 2024 21:40:25,898  INFO XMLConfigManager - Orchestration is disabled - disabling virtualization resolvers by default.
+[AD Agent init] 16 Nov 2024 21:40:25,899  INFO ContainerIdExtractor - No Container ID found in /proc/self/cgroup : does not exist or is not readable
+[AD Agent init] 16 Nov 2024 21:40:25,899  INFO ContainerIdExtractor - No Container ID found in /proc/self/mountinfo : does not exist or is not readable
+[AD Agent init] 16 Nov 2024 21:40:25,903  INFO XMLConfigManager - Default Host Identifier Resolver using host name for unique host identifier [Andriis-MacBook-Pro.local]
+[AD Agent init] 16 Nov 2024 21:40:25,906  INFO XMLConfigManager - Default IP Address Resolver found IP addresses [[fe80:0:0:0:d6b7:bb51:847:802c%utun5, fe80:0:0:0:50fd:c942:994c:364a%utun4, fe80:0:0:0:ce81:b1c:bd2c:69e%utun3, fe80:0:0:0:c899:e0db:947:a431%utun2, fe80:0:0:0:7de:b3ae:7bf2:78ef%utun1, fe80:0:0:0:60f8:8bfc:611a:d580%utun0, fe80:0:0:0:dc29:6bff:feaa:17a7%llw0, fe80:0:0:0:dc29:6bff:feaa:17a7%awdl0, fe80:0:0:0:f4d4:88ff:fe7a:6983%ap1, fe80:0:0:0:c39:9d64:33d0:443b%en0, 192.168.0.100, fe80:0:0:0:0:0:0:1%lo0]]
+[AD Agent init] 16 Nov 2024 21:40:25,907  INFO XMLConfigManager - Full Agent Registration Info Resolver using selfService [false]
+[AD Agent init] 16 Nov 2024 21:40:25,908  INFO XMLConfigManager - Full Agent Registration Info Resolver using selfService [false]
+[AD Agent init] 16 Nov 2024 21:40:25,908  INFO XMLConfigManager - Full Agent Registration Info Resolver using ephemeral node setting [false]
+[AD Agent init] 16 Nov 2024 21:40:25,908  INFO XMLConfigManager - Full Agent Registration Info Resolver using application name [Andrii Test App]
+[AD Agent init] 16 Nov 2024 21:40:25,908  INFO XMLConfigManager - Full Agent Registration Info Resolver using tier name [Test tier]
+[AD Agent init] 16 Nov 2024 21:40:25,908  INFO XMLConfigManager - Full Agent Registration Info Resolver using node name [Test node]
+[AD Agent init] 16 Nov 2024 21:40:25,909  WARN XMLConfigManager - XML Controller Info Resolver found invalid controller host information [] in controller-info.xml; Please specify a valid value if it is not already set in system properties.
+[AD Agent init] 16 Nov 2024 21:40:25,909  WARN XMLConfigManager - XML Controller Info Resolver found invalid controller port information [] in controller-info.xml; Please specify a valid value if it is not already set in system properties.
+[AD Agent init] 16 Nov 2024 21:40:25,910  INFO XMLConfigManager - XML Controller Info Resolver found controller host [davinci202411150049497.saas.appdynamics.com]
+[AD Agent init] 16 Nov 2024 21:40:25,910  INFO XMLConfigManager - XML Controller Info Resolver found controller port [443]
+[AD Agent init] 16 Nov 2024 21:40:25,911  INFO XMLConfigManager - XML Agent Account Info Resolver did not find account name. Using default account name [customer1]
+[AD Agent init] 16 Nov 2024 21:40:25,911  WARN XMLConfigManager - XML Agent Account Info Resolver did not find account access key.
+[AD Agent init] 16 Nov 2024 21:40:25,924  WARN XMLConfigManager - Possible reasons for unsuccessful agent resolver leading to agent disable: [Agent account info is supposed to be resolved, but found no account info, empty account name, or empty account key]
+[AD Agent init] 16 Nov 2024 21:40:25,926 ERROR JavaAgent - Could Not Start Java Agent, disabling the agent with exception 
+com.singularity.ee.agent.appagent.kernel.spi.exception.KernelStartException: Could not initialize configuration
+	at com.singularity.ee.agent.appagent.kernel.AgentKernel.start(AgentKernel.java:135) ~[appagent.jar:?]
+	at com.singularity.ee.agent.appagent.kernel.JavaAgent.initialize(JavaAgent.java:485) ~[appagent-boot.jar:?]
+	at com.singularity.ee.agent.appagent.kernel.JavaAgent.initialize(JavaAgent.java:365) ~[appagent-boot.jar:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at com.singularity.ee.agent.appagent.AgentEntryPoint$1.run(AgentEntryPoint.java:662) ~[?:Server Agent #24.10.0.36431 v24.10.0 GA compatible with 4.4.1.0 r8ad7818e80fbe2350b8802009cca89f08bcdfe63 release/24.10.0]
+Caused by: com.singularity.ee.agent.configuration.impl.ConfigException: Could not resolve agent-controller basic configuration. Check the logs files for possible reasons.
+	at com.singularity.ee.agent.appagent.kernel.config.xml.XMLConfigManager.executeAgentResolver(XMLConfigManager.java:200) ~[appagent.jar:?]
+	at com.singularity.ee.agent.appagent.kernel.config.xml.XMLConfigManager.<init>(XMLConfigManager.java:165) ~[appagent.jar:?]
+	at com.singularity.ee.agent.appagent.kernel.AgentKernel.start(AgentKernel.java:132) ~[appagent.jar:?]
+	... 5 more

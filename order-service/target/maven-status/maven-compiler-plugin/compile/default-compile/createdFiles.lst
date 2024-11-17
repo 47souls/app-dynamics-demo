@@ -1,0 +1,9 @@
+com/kliuiko/config/OrderProducer.class
+com/kliuiko/mapper/OrderMapper.class
+com/kliuiko/service/OrderService.class
+com/kliuiko/repository/OrderRepository.class
+com/kliuiko/dto/CreateOrderDto.class
+com/kliuiko/model/Order.class
+com/kliuiko/OrderServiceApplication.class
+com/kliuiko/mapper/OrderMapperImpl.class
+com/kliuiko/controller/OrderController.class

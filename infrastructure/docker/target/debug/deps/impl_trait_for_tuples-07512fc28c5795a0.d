@@ -1,0 +1,8 @@
+/Users/akliuiko/Projects/prediction-backend/utils/target/debug/deps/libimpl_trait_for_tuples-07512fc28c5795a0.dylib: /Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/lib.rs /Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/full_automatic.rs /Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/semi_automatic.rs /Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/utils.rs
+
+/Users/akliuiko/Projects/prediction-backend/utils/target/debug/deps/impl_trait_for_tuples-07512fc28c5795a0.d: /Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/lib.rs /Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/full_automatic.rs /Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/semi_automatic.rs /Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/utils.rs
+
+/Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/lib.rs:
+/Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/full_automatic.rs:
+/Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/semi_automatic.rs:
+/Users/akliuiko/.cargo/registry/src/index.crates.io-6f17d22bba15001f/impl-trait-for-tuples-0.2.2/src/utils.rs:

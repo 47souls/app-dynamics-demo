@@ -1,0 +1,4 @@
+[AD Agent init] 16 Nov 2024 21:40:25,881  INFO - Starting BT Logs at Sat Nov 16 21:40:25 EET 2024
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO - ###########################################################
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO - Using Java Agent Version [Server Agent #24.10.0.36431 v24.10.0 GA compatible with 4.4.1.0 r8ad7818e80fbe2350b8802009cca89f08bcdfe63 release/24.10.0]
+[AD Agent init] 16 Nov 2024 21:40:25,884  INFO - Running IBM Java Agent [No]

@@ -1,0 +1,6 @@
+<multiple-inheritance-rules>
+    <instrumentation-properties>
+        <property name="dynamic-servlet-classes" value="org.springframework.web.servlet.FrameworkServlet"/>
+        <property name="bci-fixer-other-classes" value="org.apache.http.client.methods.HttpPost,org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor,org.apache.http.impl.client.CloseableHttpClient,org.apache.http.client.methods.HttpEntityEnclosingRequestBase,org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor$1,org.apache.tomcat.util.threads.InlineExecutorService,org.apache.tomcat.util.threads.ScheduledThreadPoolExecutor,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter$MvcSimpleAsyncTaskExecutor,org.apache.http.client.methods.HttpRequestWrapper,java.util.concurrent.Executors$RunnableAdapter,org.apache.tomcat.util.threads.ThreadPoolExecutor,org.apache.http.client.methods.HttpGet,org.springframework.core.task.SimpleAsyncTaskExecutor,com.fasterxml.jackson.databind.util.internal.PrivateMaxEntriesMap$AddTask,org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler,org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState"/>
+    </instrumentation-properties>
+</multiple-inheritance-rules>

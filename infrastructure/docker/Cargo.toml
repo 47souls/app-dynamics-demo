@@ -1,0 +1,40 @@
+[package]
+name = "utils"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+amqprs = "*"
+async-trait = "0.1.81"
+mongodb = "2.1"
+bson = { version = "2", features = ["chrono-0_4"] } # Needed for using chrono datetime in doc
+tokio-tungstenite = { version = "0.21.0", features = ["native-tls"] }
+binance = "0.20.2"
+delay_timer = "0.11.5"
+ta = "0.5.0"
+reqwest = "0.11.22"
+web3 = "0.19.0"
+serde = { version = "1.0.126", features = ["derive"] }
+serde_json = "1.0.64"
+anyhow = "1.0.71"
+
+# ethers
+ethers-providers = "2.0"
+ethers-core = "2.0"
+ethers-contract = { version = "2.0.10", default-features = false }
+ethers = {version = "2.0.10", features = ["abigen", "ws", "rustls"]}
+
+# async
+futures = "0.3.27"
+tokio = { version = "1.28", features = ["full"] }
+tokio-stream = { version = "0.1", features = ['sync'] }
+
+# logging
+log = "0.4.17"
+fern = { version = "0.6.2", features = ["colored"] }
+chrono = { version = "0.4.23", features = ["serde"] }
+colored = "2.0.0"
+
+# graphs
+async-recursion = "1.0.5"
+teloxide = { version = "0.12", features = ["macros"] }
