@@ -8,17 +8,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-import java.util.UUID;
-
 @Data
 @Entity
-@Table(name = "order")
+@Table(name = "order_")
 public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private Long id;
 
     @Column
-    private String openPrice;
+    private String orderDescription;
 }

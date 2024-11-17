@@ -4,14 +4,10 @@ db.createUser({
     roles: [
         {
             role: 'readWrite',
-            db: 'prediction',
-        },
-        {
-            role: 'readWrite',
-            db: 'binance',
-        },
+            db: 'order-history',
+        }
     ],
 });
 
-db = new Mongo().getDB("ordering");
-db.createCollection('order_history');
+db = new Mongo().getDB("order-history");
+db.createCollection('order-history');
