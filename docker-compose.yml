@@ -7,7 +7,9 @@ services:
       - kafka
       - postgres
     environment:
-      - APPDYNAMICS_AGENT_NODE_NAME=order-service
+      APPDYNAMICS_AGENT_NODE_NAME: "order-service"
+      POSTGRES_SERVER_HOST: "postgres"
+      KAFKA_BOOTSTRAP_SERVERS_HOST: "kafka"
 
   order-history-service:
     image: europe-west10-docker.pkg.dev/app-dynamics-demo/app-dynamics-container-registry/order-history-service:0.0.1
@@ -17,7 +19,9 @@ services:
       - kafka
       - postgres
     environment:
-      - APPDYNAMICS_AGENT_NODE_NAME=order-history-service
+      APPDYNAMICS_AGENT_NODE_NAME: order-history-service
+      POSTGRES_SERVER_HOST: "postgres"
+      KAFKA_BOOTSTRAP_SERVERS_HOST: "kafka"
 
   postgres:
     image: postgres
