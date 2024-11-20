@@ -1,0 +1,67 @@
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  c82e12c6-3055-4f41-8efe-61ba955e3376  [Thread=AD Thread Pool-Global0] Initial logging set from the override logs dir: /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/logs/order-history-service
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  a0927900-4620-457a-95f0-a58eb7955c33  [Thread=AD Thread Pool-Global0] Now initializing the Dynamic Service  argentoDynamicService
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  fecb02ee-0782-434b-8d96-a041111b55e1  [Thread=AD Thread Pool-Global0] Multi-Tenant-Agent-Dynamic-Service: starting service...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  1218f9ba-586c-4cb9-bd3b-c72a312f6691  [Thread=AD Thread Pool-Global0] Now launching the AgentStartupHookAdaptor called by the Dynamic Service...launching from /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  f41faad9-db5f-4db0-a7b1-586819e668f2  [Thread=AD Thread Pool-Global0] Launching Argento Dynamic Service via com.cisco.mtagent.adaptors.AgentStartupHookAdaptor
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  8c73deba-bdc1-40b1-a895-10006993ec56  [Thread=AD Thread Pool-Global0] Current directory is /Users/akliuiko/Projects/app-dynamics-demo/.
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  8631b76e-f740-48bd-9286-144675bd78f4  [Thread=AD Thread Pool-Global0] Adaptor directory is /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  70b6e41a-67c9-449f-9c97-d53ccff6dc69  [Thread=AD Thread Pool-Global0] Are we doing Unit Tests? false
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  5a2e6306-aa70-437f-87b7-2a07fe7c8076  [Thread=AD Thread Pool-Global0] Preparing Dynamic Services folder /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argento-security-extension
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  43140410-81a5-4ba7-95db-90ca3454a9ca  [Thread=AD Thread Pool-Global0] Loading Dynamic Service Properties from /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argentoDynamicService.properties
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  a8ce7b55-8c55-4ed1-b115-9aed7cbce8e7  [Thread=AD Thread Pool-Global0] Checking to see if System property file /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argentoDynamicService-system.properties exists to set properties in the runtime...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  4cc51464-35b4-44ae-b5c0-49c6adc07a4a  [Thread=AD Thread Pool-Global0] System property file /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argentoDynamicService-system.properties does not exist, no System properties will be set...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  6753592d-e5f4-4fcb-8872-f79c60136d90  [Thread=AD Thread Pool-Global0] The AgentStartupHookAdaptor will be Launching Multi Tenant Java Agent Jar /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argento-security-extension/lib/mtAgent.jar
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  0b35570a-a83b-4ac5-9761-d8d848585b55  [Thread=AD Thread Pool-Global0] StartupHookAdaptor is Launching from Adaptor Multi Tenant Java Agent Jar /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argento-security-extension/lib/mtAgent.jar
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  dea8b55d-ad2d-4535-ba71-5af1beeda2c1  [Thread=AD Thread Pool-Global0] Opening ManifestFile in jar /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argento-security-extension/lib/mtAgent.jar
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  46e414d2-7672-48f7-84a4-faca3630f49e  [Thread=AD Thread Pool-Global0] Now getting the input stream for manifest in jar...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  562626e4-45b0-4a6f-abbf-c84d4d3c230e  [Thread=AD Thread Pool-Global0] Reading from Manifest: Manifest-Version: 1.0
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  38da153e-be20-42c3-a69b-9949bab3028d  [Thread=AD Thread Pool-Global0] Reading from Manifest: Implementation-Title: Cisco Multi-Tenant Agent
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  a2089d44-3857-4fc5-bd34-5a23ecc255a4  [Thread=AD Thread Pool-Global0] Reading from Manifest: Implementation-Version: 1.0
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  20d2c563-31bf-4483-879f-a3f7fd4ed867  [Thread=AD Thread Pool-Global0] Reading from Manifest: Built-By: ubuntu
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  720f8aa4-dabd-461b-93ea-ce98b07eebf8  [Thread=AD Thread Pool-Global0] Reading from Manifest: Built-Date: Mon Oct 21 22:55:53 UTC 2024
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  51d196bd-da68-4108-908f-e068e2d37713  [Thread=AD Thread Pool-Global0] Reading from Manifest: Built-JDK: 11.0.24
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  149d7f4f-3852-4d97-a846-77d88f7c1984  [Thread=AD Thread Pool-Global0] Reading from Manifest: Can-Retransform-Classes: true
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  0ff065b2-81d1-42eb-b860-ee4903f18e0a  [Thread=AD Thread Pool-Global0] Reading from Manifest: Can-Redefine-Classes: true
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  f509baad-80b2-4276-8af1-6ebd4be99d48  [Thread=AD Thread Pool-Global0] Reading from Manifest: Boot-Class-Path: mtAgent-boot.jar
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  4e1f2509-1ecb-48ff-a439-5a9a1ea569fb  [Thread=AD Thread Pool-Global0] Reading from Manifest: Class-Path: mtAgent-V9.jar
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  7aa41393-fa3f-45e7-b9f8-ccccd6ab0c80  [Thread=AD Thread Pool-Global0] Reading from Manifest: Premain-Class: com.cisco.mtagent.entry.MTAgent
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  fa838a1f-bfe9-4cea-b1ff-f4f1af88d8cf  [Thread=AD Thread Pool-Global0] Reading from Manifest: Agent-Class: com.cisco.mtagent.entry.MTAgent
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  60748173-9ce5-4595-9fd7-3c8415c40863  [Thread=AD Thread Pool-Global0] Reading from Manifest: 
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  e034e254-7e51-4ec7-b2e2-168a48713d4d  [Thread=AD Thread Pool-Global0] Adaptor Agent Manifest is Manifest-Version: 1.0
+Implementation-Title: Cisco Multi-Tenant Agent
+Implementation-Version: 1.0
+Built-By: ubuntu
+Built-Date: Mon Oct 21 22:55:53 UTC 2024
+Built-JDK: 11.0.24
+Can-Retransform-Classes: true
+Can-Redefine-Classes: true
+Boot-Class-Path: mtAgent-boot.jar
+Class-Path: mtAgent-V9.jar
+Premain-Class: com.cisco.mtagent.entry.MTAgent
+Agent-Class: com.cisco.mtagent.entry.MTAgent
+
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  ecd95c8c-efa9-441d-98a5-7607c6b0f2ca  [Thread=AD Thread Pool-Global0] Adaptor Agent Manifest map is {Can-Redefine-Classes=true, Implementation-Title=Cisco Multi-Tenant Agent, Built-JDK=11.0.24, Built-Date=Mon Oct 21 22, Boot-Class-Path=mtAgent-boot.jar, Implementation-Version=1.0, Manifest-Version=1.0, Class-Path=mtAgent-V9.jar, Agent-Class=com.cisco.mtagent.entry.MTAgent, Can-Retransform-Classes=true, Premain-Class=com.cisco.mtagent.entry.MTAgent, Built-By=ubuntu}
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  4f39f4a8-182f-425f-9a12-3d6d42804511  [Thread=AD Thread Pool-Global0] Adding Adaptor Agent jar /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argento-security-extension/lib/mtAgent-boot.jar to boot loader classpath...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  3bf91e30-9606-41ad-9cbc-606f4e0d673a  [Thread=AD Thread Pool-Global0] Adding jar /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argento-security-extension/lib/mtAgent-V9.jar to system loader classpath...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  5783280c-af4c-4c6b-9850-02c3eb1a7561  [Thread=AD Thread Pool-Global0] Adding jar /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argento-security-extension/lib/mtAgent.jar to system loader classpath...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  84f660c3-7a5e-41b3-807e-8b1bd759fb53  [Thread=AD Thread Pool-Global0] Adding Agent Entry jar /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/external-services/argentoDynamicService/argento-security-extension/lib/mtAgent.jar to system loader classpath...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  cf8d9e7e-a3a7-4aa7-b30a-31c8e88c8b78  [Thread=AD Thread Pool-Global0] Adaptor Agent jar is now loaded in System Class Loader...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  3a7ec79e-d798-40b6-a5c7-6d046297c213  [Thread=AD Thread Pool-Global0] Boot class class com.cisco.mtagent.boot.Controller created, loader is null
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  6c682e4c-c6bc-486c-a093-398ef51b7e0c  [Thread=AD Thread Pool-Global0] Java version is 18
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  99f35a8f-97f3-46ad-8eac-d07049fe22a6  [Thread=AD Thread Pool-Global0] About to load the Adaptor Agent premain class...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  bffef093-800e-4c77-b25c-7806d4e3eafb  [Thread=AD Thread Pool-Global0] Premain class loaded...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  78f6c0ae-344c-45a4-819e-011967869195  [Thread=AD Thread Pool-Global0] Launching startup adaptor thread...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  f7ce8114-fc86-4cff-8cad-841ebe5c49bf  [Thread=AD Thread Pool-Global0] Multi-Tenant-Agent-Dynamic-Service: service started successfully...
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  fbd8a2f0-9005-44ed-ae84-4eb926c1d7b2  [Thread=AD Thread Pool-Global0] 
+APM Service Info==> 
+Installation Dir: /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431
+Agent Runtime Dir: /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431
+Config Dir: /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/conf
+Runtime Config Dir: /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/conf
+Base Config Dir: /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/conf
+Installation Dir: /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431
+Node Dir: order-history-service
+Logs Dir: /Users/akliuiko/Projects/app-dynamics-demo/app-dynamics-agent/ver24.10.0.36431/logs/order-history-service
+
+INFO  2024-11-20T11:32:17+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  c01f4e2d-8bdf-43c0-b9b1-195c4b335f7e  [Thread=Cisco-Multi-Tenant-Agent-Startup-Hook-Adapter-Thread] Premain class com.cisco.mtagent.entry.MTAgent invoked...agent should be running...
+INFO  2024-11-20T12:38:11+02:00  Andriis-MacBook-Pro.local  SecureAppDynamicService  97067  67c889de-a94d-4286-bab7-9a097501effd  [Thread=AD Thread Pool-Global0] Multi-Tenant-Agent-Dynamic-Service: Dynamic Service change requested: STOP

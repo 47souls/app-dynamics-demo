@@ -1,0 +1,14 @@
+1730194754000
+io.opentelemetry.api.trace.propagation.internal
+io.opentelemetry.api.trace.propagation
+io.opentelemetry.api.logs
+io.opentelemetry.api.trace
+io.opentelemetry.api.metrics
+io.opentelemetry.api.baggage
+io.opentelemetry.context.propagation
+io.opentelemetry.context
+io.opentelemetry.api.common
+io.opentelemetry.api.internal
+io.opentelemetry.context.internal.shaded
+io.opentelemetry.api.baggage.propagation
+io.opentelemetry.api

@@ -1,0 +1,9 @@
+1730194754000
+io.opentelemetry.exporter.otlp.metrics
+io.opentelemetry.exporter.otlp.internal
+io.opentelemetry.exporter.otlp.http.metrics
+io.opentelemetry.exporter.otlp.http.logs
+io.opentelemetry.exporter.otlp.http.trace
+io.opentelemetry.exporter.otlp.all.internal
+io.opentelemetry.exporter.otlp.logs
+io.opentelemetry.exporter.otlp.trace

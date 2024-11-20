@@ -1,0 +1,3 @@
+[AD Agent init] 16 Nov 2024 21:51:35,186  INFO com.singularity.dynamicservice.DynamicServiceManager - Scheduling DynamicServiceManager at interval of 30 seconds
+[AD Thread Pool-Global1] 16 Nov 2024 21:52:05,192  INFO com.singularity.dynamicservice.DynamicServiceManager - Using services directories [/Users/akliuiko/Projects/AppDynamics/ver24.10.0.36431/external-services, /Users/akliuiko/Projects/AppDynamics/ver24.10.0.36431/external-services/Test node]
+[AD Thread Pool-Global1] 16 Nov 2024 21:52:05,215  INFO com.singularity.dynamicservice.DynamicServiceManager - Dynamic Service jar file signature is verified and loaded for argentoDynamicService.  Service class name com.cisco.mtagent.adaptors.AgentDynamicServiceAdaptor
