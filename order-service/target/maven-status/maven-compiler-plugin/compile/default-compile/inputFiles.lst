@@ -1,8 +1,0 @@
-/Users/akliuiko/Projects/app-dynamics-demo/order-service/src/main/java/com/kliuiko/OrderServiceApplication.java
-/Users/akliuiko/Projects/app-dynamics-demo/order-service/src/main/java/com/kliuiko/controller/OrderController.java
-/Users/akliuiko/Projects/app-dynamics-demo/order-service/src/main/java/com/kliuiko/dto/CreateOrderDto.java
-/Users/akliuiko/Projects/app-dynamics-demo/order-service/src/main/java/com/kliuiko/kafka/OrderProducer.java
-/Users/akliuiko/Projects/app-dynamics-demo/order-service/src/main/java/com/kliuiko/mapper/OrderMapper.java
-/Users/akliuiko/Projects/app-dynamics-demo/order-service/src/main/java/com/kliuiko/model/Order.java
-/Users/akliuiko/Projects/app-dynamics-demo/order-service/src/main/java/com/kliuiko/repository/OrderRepository.java
-/Users/akliuiko/Projects/app-dynamics-demo/order-service/src/main/java/com/kliuiko/service/OrderService.java

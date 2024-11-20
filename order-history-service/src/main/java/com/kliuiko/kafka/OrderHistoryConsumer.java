@@ -1,6 +1,5 @@
 package com.kliuiko.kafka;
 
-import com.kliuiko.model.Order;
 import com.kliuiko.model.OrderHistory;
 import com.kliuiko.service.OrderHistoryService;
 import org.slf4j.Logger;
@@ -22,10 +21,9 @@ public class OrderHistoryConsumer {
         this.orderHistoryService = orderHistoryService;
     }
 
-    @KafkaListener(topics = "order", groupId = "kluyuko-group")
-    public void consume(Order order, Acknowledgment ack) throws InterruptedException {
+    @KafkaListener(topics = "order", groupId = "order-group")
+    public void consume(String order, Acknowledgment ack) throws InterruptedException {
         logger.info("Received order message: " + order + " , creating order history, it takes time (3s)");
-        Thread.sleep(3000);
         OrderHistory orderHistory = orderHistoryService.createOrderHistory(order);
         logger.info("Order history for order with id " + orderHistory.getId() + " was created. Created at " + orderHistory.getCreatedAt());
         ack.acknowledge();

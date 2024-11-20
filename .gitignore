@@ -1,10 +1,10 @@
 HELP.md
 order-history-service/target/
 !order-service/.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+#!**/src/main/**/target/
+#!**/src/test/**/target/
 data/
-
+target/
 ### STS ###
 .apt_generated
 .classpath
