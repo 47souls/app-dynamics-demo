@@ -2,7 +2,6 @@
 
 ################################################################################
 # Create a stage for building the application.
-
 FROM openjdk:17-jdk-slim AS build
 RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring

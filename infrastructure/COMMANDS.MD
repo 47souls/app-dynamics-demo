@@ -8,7 +8,7 @@ docker run --rm -v $PWD/state:/app/.state terraform-local {init/plan/apply/destr
 
 # to build server (from root of the project)
 # for linux
-docker build . -t prediction-server:latest --platform linux/amd64
+docker build . -t order-service:latest --platform linux/amd64
 ```
 
 ### To push image to registry
@@ -17,14 +17,11 @@ docker build . -t prediction-server:latest --platform linux/amd64
 # copy files from my local env to vm
 gcloud compute scp ~/localtest.txt ~/localtest2.txt example-instance:~/narnia
 
-# 
 gcloud auth login
 cd auth
 
-gcloud auth activate-service-account prediction-bot-account@prediction-bot-408920.iam.gserviceaccount.com --key-file=auth.json
-gcloud auth configure-docker us-west1-docker.pkg.dev
-# to build for mac remove platform arg
-# docker build . -t prediction-bot-server --platform linux/amd64 -f server/Dockerfile
+gcloud auth activate-service-account ap-dynamics-service-user@app-dynamics-demo.iam.gserviceaccount.com --key-file=auth.json
+gcloud auth configure-docker europe-west10-docker.pkg.dev
 
 docker tag prediction-server:latest us-west1-docker.pkg.dev/prediction-bot-408920/docker-repository/prediction-bot-server:latest
 docker push us-west1-docker.pkg.dev/prediction-bot-408920/docker-repository/prediction-bot-server
@@ -39,6 +36,7 @@ git clone https://github.com/47souls/prediction-backend
 ```
 
 ### Backup mongo db volume 
+
 ```shell
 # Export data from vm
 docker run --rm --volumes-from {CONTAINER_ID} -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /data/db
@@ -49,6 +47,7 @@ docker run --rm --volumes-from {CONTAINER_ID} -v $(pwd):/backup ubuntu bash -c "
 ```
 
 ### Cleanup build cache at vm (free up space)
+
 ```shell
 # free many space but next build will be slooooooow (25 mins)
 docker builder prune

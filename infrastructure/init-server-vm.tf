@@ -16,7 +16,7 @@ EOF
 }
 
 resource "google_compute_instance" "default" {
-  name         = "prediction-backend-${var.environment}-server"
+  name         = "app-dynamics-${var.environment}-server"
   machine_type = var.server_machine_type
   zone         = var.gcp_zone
   tags         = ["ssh"]

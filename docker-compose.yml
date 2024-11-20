@@ -1,23 +1,26 @@
 services:
   order-service:
-    image: order-service:latest
+    image: europe-west10-docker.pkg.dev/app-dynamics-demo/app-dynamics-container-registry/order-service:0.0.1
     ports:
       - "8080:8080"
     depends_on:
       - kafka
       - postgres
+    environment:
+      - APPDYNAMICS_AGENT_NODE_NAME=order-service
 
   order-history-service:
-    image: order-history-service:latest
+    image: europe-west10-docker.pkg.dev/app-dynamics-demo/app-dynamics-container-registry/order-history-service:0.0.1
     ports:
       - "8080:8080"
     depends_on:
       - kafka
+      - postgres
+    environment:
+      - APPDYNAMICS_AGENT_NODE_NAME=order-history-service
 
   postgres:
     image: postgres
-    volumes:
-      - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
@@ -34,29 +37,6 @@ services:
     ports:
       - "2181:2181"
 
-#  zookeeper:
-#    image: confluentinc/cp-zookeeper:latest
-#    environment:
-#      ZOOKEEPER_CLIENT_PORT: 2181
-#      ZOOKEEPER_TICK_TIME: 2000
-#    ports:
-#      - "2181:2181"
-
-#  kafka:
-#    image: confluentinc/cp-kafka:latest
-#    ports:
-#      - "9092:9092"
-#    depends_on:
-#      - zookeeper
-#    environment:
-#      KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE:
-#      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
-#      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9092
-#      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT
-#      KAFKA_LISTENERS: INSIDE://kafka:9092
-#      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-#      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
-
   kafka:
     image: bitnami/kafka:3.7.0
     depends_on:
@@ -68,11 +48,8 @@ services:
       KAFKA_CFG_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,EXTERNAL://localhost:29092
       KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_CFG_INTER_BROKER_LISTENER_NAME: INTERNAL
-      # optional - enable topic auto create
       KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: 'true'
       ALLOW_PLAINTEXT_LISTENER: 'yes'
     ports:
       - "9092:9092"
       - "29092:29092"
-#    volumes:
-#      - kafka_data1:/bitnami/kafka
