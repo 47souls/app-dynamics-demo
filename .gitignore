@@ -30,4 +30,4 @@ build/
 .vscode/
 
 ../app-dynamics-agent
-../auth.json
+infrastructure/auth/auth.json
