@@ -70,6 +70,52 @@
 				<artifactId>postgresql</artifactId>
 				<version>${postgresql.version}</version>
 			</dependency>
+			<!-- OpenTelemetry API -->
+			<dependency>
+				<groupId>io.opentelemetry</groupId>
+				<artifactId>opentelemetry-api</artifactId>
+				<version>1.25.0</version>
+			</dependency>
+
+			<!-- OpenTelemetry SDK -->
+			<dependency>
+				<groupId>io.opentelemetry</groupId>
+				<artifactId>opentelemetry-sdk</artifactId>
+				<version>1.25.0</version>
+			</dependency>
+
+			<!-- OpenTelemetry Exporter for Jaeger (gRPC) -->
+			<dependency>
+				<groupId>io.opentelemetry.exporters</groupId>
+				<artifactId>opentelemetry-exporter-jaeger</artifactId>
+				<version>1.28.0</version>
+			</dependency>
+
+			<!-- OpenTelemetry Kafka Instrumentation -->
+			<dependency>
+				<groupId>io.opentelemetry.instrumentation</groupId>
+				<artifactId>opentelemetry-instrumentation-kafka</artifactId>
+				<version>1.25.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.opentelemetry.exporters</groupId>
+				<artifactId>opentelemetry-exporter-otlp-grpc</artifactId>
+				<version>1.25.0</version>
+			</dependency>
+
+			<!-- OpenTelemetry Spring Boot Starter -->
+			<dependency>
+				<groupId>io.opentelemetry.instrumentation</groupId>
+				<artifactId>opentelemetry-spring-boot-starter</artifactId>
+				<version>2.6.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-aop</artifactId>
+			</dependency>
+
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
