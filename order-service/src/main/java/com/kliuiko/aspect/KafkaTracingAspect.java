@@ -35,7 +35,7 @@ public class KafkaTracingAspect {
         // Attach the span to the current context (allowing it to propagate)
         try (Scope scope = span.makeCurrent()) {
             // Perform the Kafka send operation
-            // Kafka send logic will proceed as usual
+            kafkaSend();
         } finally {
             span.end(); // Ensure the span is ended after the operation
         }
