@@ -1,12 +1,12 @@
 package com.kliuiko.aspect;
 
-import io.opentelemetry.api.GlobalOpenTelemetry;
 import io.opentelemetry.api.trace.Span;
 import io.opentelemetry.api.trace.Tracer;
 import io.opentelemetry.context.Scope;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Aspect
@@ -15,9 +15,9 @@ public class KafkaTracingAspect {
 
     private final Tracer tracer;
 
-    public KafkaTracingAspect() {
-        // Initialize OpenTelemetry tracer
-        this.tracer = GlobalOpenTelemetry.getTracer("spring-boot-kafka");
+    @Autowired
+    public KafkaTracingAspect(final Tracer tracer) {
+        this.tracer = tracer;
     }
 
     @Pointcut("execution(* org.springframework.kafka.core.KafkaTemplate.send(..))")
@@ -29,7 +29,7 @@ public class KafkaTracingAspect {
     public void traceKafkaSend() {
         // Create a new span for each Kafka message send
         Span span = tracer.spanBuilder("Kafka Produce")
-                .setAttribute("messaging.destination", "your-topic-name") // Optionally specify topic name
+                .setAttribute("messaging.destination", "retrieve from aop")
                 .startSpan();
 
         // Attach the span to the current context (allowing it to propagate)
@@ -37,7 +37,7 @@ public class KafkaTracingAspect {
             // Perform the Kafka send operation
             kafkaSend();
         } finally {
-            span.end(); // Ensure the span is ended after the operation
+            span.end();
         }
     }
 }

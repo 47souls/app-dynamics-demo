@@ -21,6 +21,7 @@
 	<modules>
 		<module>order-service</module>
 		<module>order-history-service</module>
+		<module>tracing-utils</module>
 	</modules>
 
 	<properties>

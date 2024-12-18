@@ -11,3 +11,8 @@ At vm
 - sudo apt update && sudo apt install openjdk-11-jdk -y && java -version
 - nohup java -jar machineagent.jar & (to start this process at background)
 3. Use https://github.com/Appdynamics/prometheus-extension 
+
+Open telemetry possible todos, discuss with Andrii
+
+1. Need to add aspects for db calls tracing
+2. 
