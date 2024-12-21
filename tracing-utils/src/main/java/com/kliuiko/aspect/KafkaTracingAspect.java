@@ -1,43 +1,49 @@
 package com.kliuiko.aspect;
 
-import io.opentelemetry.api.trace.Span;
 import io.opentelemetry.api.trace.Tracer;
-import io.opentelemetry.context.Scope;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
+
+import java.lang.reflect.Method;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 @Aspect
 @Component
-public class KafkaTracingAspect {
+public class KafkaTracingAspect extends TracingAspect {
 
-    private final Tracer tracer;
-
-    @Autowired
-    public KafkaTracingAspect(final Tracer tracer) {
-        this.tracer = tracer;
+    public KafkaTracingAspect(Tracer tracer) {
+        super(tracer);
     }
 
-    @Pointcut("execution(* org.springframework.kafka.core.KafkaTemplate.send(..))")
-    public void kafkaSend() {
-        // Pointcut for KafkaTemplate's send method
+    @Around("execution(* org.springframework.kafka.core.KafkaTemplate.send(..)) && within(@com.kliuiko.aspect.EnableTracing *)")
+    public Object aroundKafkaProduce(ProceedingJoinPoint joinPoint) {
+        return decorateWithTracing(joinPoint, "Kafka message send", "kafka");
     }
 
-    @Before("kafkaSend()")
-    public void traceKafkaSend() {
-        // Create a new span for each Kafka message send
-        Span span = tracer.spanBuilder("Kafka Produce")
-                .setAttribute("messaging.destination", "retrieve from aop")
-                .startSpan();
+    @Around("@annotation(org.springframework.kafka.annotation.KafkaListener)) && within(@com.kliuiko.aspect.EnableTracing *)")
+    public Object aroundKafkaConsume(ProceedingJoinPoint joinPoint) {
+        // Get the method being executed
+        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
+        Method method = signature.getMethod();
 
-        // Attach the span to the current context (allowing it to propagate)
-        try (Scope scope = span.makeCurrent()) {
-            // Perform the Kafka send operation
-            kafkaSend();
-        } finally {
-            span.end();
+        // Get the KafkaListener annotation
+        KafkaListener kafkaListener = method.getAnnotation(KafkaListener.class);
+
+        Map<String, String> attributesMap = new HashMap<>();
+
+        if (kafkaListener != null) {
+            // Retrieve annotation values
+            String groupId = kafkaListener.groupId();
+            String[] topics = kafkaListener.topics();
+            attributesMap.put("groupId", groupId);
+            attributesMap.put("topics", String.join(", ", topics));
         }
+        return decorateWithTracing(joinPoint, "Kafka message receive", "kafka", attributesMap);
     }
 }
