@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 public class OrderService {
 
     private final OrderProducer orderProducer;
-
     private final OrderRepository orderRepository;
     private final OrderMapper orderMapper;
 
